@@ -102,14 +102,14 @@ apt install -y socat
 
 #安装脚本
 curl https://get.acme.sh | sh
-~/.acme.sh/acme.sh --register-account -m chongdong1230@gmail.com
+~/.acme.sh/acme.sh --register-account -m xxxxx@gmail.com
 
 #放行80端口
 iptables -I INPUT -p tcp --dport 80 -j ACCEPT
 
 #申请证书
-~/.acme.sh/acme.sh  --issue -d hk1.jishuzhai.cf   --standalone
-~/.acme.sh/acme.sh --installcert -d hk1.jishuzhai.cf --key-file /root/private.key --fullchain-file /root/cert.crt
+~/.acme.sh/acme.sh  --issue -d xxx.com   --standalone
+~/.acme.sh/acme.sh --installcert -d xxx.com --key-file /root/private.key --fullchain-file /root/cert.crt
 
 #Xray一键代码
 bash <(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)
@@ -118,3 +118,4 @@ iptables -I INPUT -p tcp --dport 54321 -j ACCEPT
 iptables -I INPUT -p tcp --dport 443 -j ACCEPT
 iptables -I INPUT -p tcp --dport 3214 -j ACCEPT
 -------------------------------------------------------------
+仅支持CentOS7.爬虫网站一键：wget https://raw.githubusercontent.com/lanhebe/proxypool/master/onekey_install.sh && chmod +x onekey_install.sh && ./onekey_install.sh
