@@ -108,11 +108,12 @@ curl https://get.acme.sh | sh
 iptables -I INPUT -p tcp --dport 80 -j ACCEPT
 
 #申请证书
-~/.acme.sh/acme.sh  --issue -d xxx.com   --standalone
+~/.acme.sh/acme.sh  --issue -d xxx.com --standalone
 ~/.acme.sh/acme.sh --installcert -d xxx.com --key-file /root/private.key --fullchain-file /root/cert.crt
 
 #Xray一键代码
 bash <(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)
+
 #放行端口
 iptables -I INPUT -p tcp --dport 54321 -j ACCEPT
 iptables -I INPUT -p tcp --dport 443 -j ACCEPT
